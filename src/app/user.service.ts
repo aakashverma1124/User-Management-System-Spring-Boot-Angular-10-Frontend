@@ -8,10 +8,15 @@ import {User} from './user';
 })
 export class UserService {
 
-  private baseURL = "http://localhost:8080/users/get-users";
+  private getUsersURL = "http://localhost:8080/users/get-users";
+  private addUserURL = "http://localhost:8080/users/add-user";
   constructor(private httpClient: HttpClient) { }
 
   getUsersList(): Observable<User[]> {
-    return this.httpClient.get<User[]>(`${this.baseURL}`);
+    return this.httpClient.get<User[]>(`${this.getUsersURL}`);
+  }
+
+  addUser(user: User): Observable<Object> {
+    return this.httpClient.post(`${this.addUserURL}`, user);
   }
 }
