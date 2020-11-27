@@ -8,13 +8,15 @@ import {AppRoutingModule} from './app-routing.module';
 import { AddUserComponent } from './add-user/add-user.component';
 import {FormsModule} from '@angular/forms';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     AddUserComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
