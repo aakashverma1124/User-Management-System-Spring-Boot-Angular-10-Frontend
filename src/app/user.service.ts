@@ -12,6 +12,7 @@ export class UserService {
   private addUserURL = "http://localhost:8080/users/add-user";
   private getUserURL = "http://localhost:8080/users/get-user";
   private updateUserURL = "http://localhost:8080/users/update-user";
+  private deleteUserURL = "http://localhost:8080/users/delete-user";
   constructor(private httpClient: HttpClient) { }
 
   getUsersList(): Observable<User[]> {
@@ -28,5 +29,9 @@ export class UserService {
 
   updateUser(id: number, user: User): Observable<Object> {
     return this.httpClient.put(`${this.updateUserURL}/${id}`, user);
+  }
+
+  deleteUser(id: number): Observable<Object> {
+    return this.httpClient.delete(`${this.deleteUserURL}/${id}`);
   }
 }

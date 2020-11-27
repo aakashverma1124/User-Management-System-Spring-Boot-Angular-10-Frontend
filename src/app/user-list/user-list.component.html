@@ -1,21 +1,24 @@
 <h2>User List</h2>
-<table class="table table-striped">
-  <thead class="thead-light">
-  <tr>
-    <th> First Name </th>
-    <th> Last Name </th>
-    <th> Email Id </th>
-    <th>Action</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let user of users">
-    <td>{{user.firstName}}</td>
-    <td>{{user.lastName}}</td>
-    <td>{{user.emailId}}</td>
-    <td>
-      <a type="submit" (click)="updateUser(user.id)"><i class="fas fa-edit"></i></a>
-    </td>
-  </tr>
-  </tbody>
-</table>
+<div style="overflow-x:auto;">
+  <table class="table table-striped">
+    <thead class="thead-light">
+    <tr>
+      <th> First Name </th>
+      <th> Last Name </th>
+      <th> Email Id </th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.emailId}}</td>
+      <td>
+        <a type="submit" (click)="updateUser(user.id)"><i class="fas fa-edit"></i></a>
+        <a type="submit" (click)="deleteUser(user.id)"><i class="fas fa-trash"></i></a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

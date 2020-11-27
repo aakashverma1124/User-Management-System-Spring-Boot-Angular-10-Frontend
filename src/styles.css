@@ -10,3 +10,6 @@
   text-align: center;
 }
 
+a+a {
+  margin-left: 20px;
+}
