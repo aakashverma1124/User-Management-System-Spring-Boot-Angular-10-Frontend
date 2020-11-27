@@ -18,17 +18,17 @@ export class AddUserComponent implements OnInit {
 
   saveUser(): void {
     this.userService.addUser(this.user).subscribe(data => {
-      console.log(data);
       this.goToUserList();
     },
       error => (console.log(error)));
   }
 
   goToUserList(): void {
-     this.router.navigate(['/users'])
+     this.router.navigate(['/users']);
   }
+
   onSubmit(): void {
-  this.saveUser()
+  this.saveUser();
   }
 
 }

@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import {Router, RouterModule, Routes} from '@angular/router';
 import {UserListComponent} from './user-list/user-list.component';
 import {AddUserComponent} from './add-user/add-user.component';
+import {UpdateUserComponent} from './update-user/update-user.component';
 
 
 const routes: Routes = [
   {path: 'users', component: UserListComponent},
   {path: 'add-user', component: AddUserComponent},
+  {path: 'update-user/:id', component: UpdateUserComponent},
   {path: '', redirectTo: 'users', pathMatch: 'full'}
 ];
 
